@@ -1,0 +1,4 @@
+RVE Dimention: 2x2x2 (mm)
+fibre radius: 0.79788456
+total strain displacement(normal) = 0.02 (mm) 
+strain displacement(shear) = 0.1(mm) in one direction and other end fixed

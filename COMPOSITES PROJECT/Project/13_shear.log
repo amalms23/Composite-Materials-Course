@@ -1,0 +1,16 @@
+Abaqus JOB 13_shear
+Abaqus 6.14-5
+Abaqus License Manager checked out the following licenses:
+Abaqus/Standard checked out 5 tokens from Flexnet server DESKTOP-QELVSQ1.
+<1019 out of 1024 licenses remain available>.
+Begin Analysis Input File Processor
+23-04-2023 09:18:55
+Run pre.exe
+23-04-2023 09:19:00
+End Analysis Input File Processor
+Begin Abaqus/Standard Analysis
+23-04-2023 09:19:00
+Run standard.exe
+23-04-2023 09:19:08
+End Abaqus/Standard Analysis
+Abaqus JOB 13_shear COMPLETED

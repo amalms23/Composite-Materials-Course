@@ -1,0 +1,94 @@
+# -*- coding: mbcs -*-
+#
+# Abaqus/CAE Release 6.14-5 replay file
+# Internal Version: 2015_08_18-20.07.49 135153
+# Run by user on Mon Apr 24 00:16:33 2023
+#
+
+# from driverUtils import executeOnCaeGraphicsStartup
+# executeOnCaeGraphicsStartup()
+#: Executing "onCaeGraphicsStartup()" in the site directory ...
+#: Abaqus Error: 
+#: This error may have occurred due to a change to the Abaqus Scripting
+#: Interface. Please see the Abaqus Scripting Manual for the details of
+#: these changes. Also see the "Example environment files" section of 
+#: the Abaqus Site Guide for up-to-date examples of common tasks in the
+#: environment file.
+#: Execution of "onCaeGraphicsStartup()" in the site directory failed.
+from abaqus import *
+from abaqusConstants import *
+session.Viewport(name='Viewport: 1', origin=(0.0, 0.0), width=198.190338134766, 
+    height=127.565101623535)
+session.viewports['Viewport: 1'].makeCurrent()
+session.viewports['Viewport: 1'].maximize()
+from caeModules import *
+from driverUtils import executeOnCaeStartup
+executeOnCaeStartup()
+openMdb('RVE.cae')
+#: The model database "E:\Project\RVE.cae" has been opened.
+session.viewports['Viewport: 1'].setValues(displayedObject=None)
+session.viewports['Viewport: 1'].partDisplay.geometryOptions.setValues(
+    referenceRepresentation=ON)
+p = mdb.models['Model-1'].parts['Part-1']
+session.viewports['Viewport: 1'].setValues(displayedObject=p)
+#--- Recover file: 'RVE.rec' ---
+# -*- coding: mbcs -*- 
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+mdb.jobs['23_shear'].submit(consistencyChecking=OFF)
+mdb.jobs['23_shear']._Message(STARTED, {'phase': BATCHPRE_PHASE, 
+    'clientHost': 'DESKTOP-QELVSQ1', 'handle': 0, 'jobName': '23_shear'})
+mdb.jobs['23_shear']._Message(WARNING, {'phase': BATCHPRE_PHASE, 
+    'message': '36 elements are distorted. Either the isoparametric angles are out of the suggested limits or the triangular or tetrahedral quality measure is bad. The elements have been identified in element set WarnElemDistorted.', 
+    'jobName': '23_shear'})
+mdb.jobs['23_shear']._Message(ODB_FILE, {'phase': BATCHPRE_PHASE, 
+    'file': 'E:\\Project\\23_shear.odb', 'jobName': '23_shear'})
+mdb.jobs['23_shear']._Message(COMPLETED, {'phase': BATCHPRE_PHASE, 
+    'message': 'Analysis phase complete', 'jobName': '23_shear'})
+mdb.jobs['23_shear']._Message(STARTED, {'phase': STANDARD_PHASE, 
+    'clientHost': 'DESKTOP-QELVSQ1', 'handle': 5404, 'jobName': '23_shear'})
+mdb.jobs['23_shear']._Message(STEP, {'phase': STANDARD_PHASE, 'stepId': 1, 
+    'jobName': '23_shear'})
+mdb.jobs['23_shear']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 0, 'jobName': '23_shear'})
+mdb.jobs['23_shear']._Message(STATUS, {'totalTime': 0.0, 'attempts': 0, 
+    'timeIncrement': 1.0, 'increment': 0, 'stepTime': 0.0, 'step': 1, 
+    'jobName': '23_shear', 'severe': 0, 'iterations': 0, 
+    'phase': STANDARD_PHASE, 'equilibrium': 0})
+mdb.jobs['23_shear']._Message(MEMORY_ESTIMATE, {'phase': STANDARD_PHASE, 
+    'jobName': '23_shear', 'memory': 244.0})
+mdb.jobs['23_shear']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 1, 'jobName': '23_shear'})
+mdb.jobs['23_shear']._Message(STATUS, {'totalTime': 1.0, 'attempts': 1, 
+    'timeIncrement': 1.0, 'increment': 1, 'stepTime': 1.0, 'step': 1, 
+    'jobName': '23_shear', 'severe': 0, 'iterations': 1, 
+    'phase': STANDARD_PHASE, 'equilibrium': 1})
+mdb.jobs['23_shear']._Message(END_STEP, {'phase': STANDARD_PHASE, 'stepId': 1, 
+    'jobName': '23_shear'})
+mdb.jobs['23_shear']._Message(COMPLETED, {'phase': STANDARD_PHASE, 
+    'message': 'Analysis phase complete', 'jobName': '23_shear'})
+mdb.jobs['23_shear']._Message(JOB_COMPLETED, {
+    'time': 'Sun Apr 23 11:03:16 2023', 'jobName': '23_shear'})
+#--- End of Recover file ------
+session.viewports['Viewport: 1'].partDisplay.setValues(sectionAssignments=ON, 
+    engineeringFeatures=ON)
+session.viewports['Viewport: 1'].partDisplay.geometryOptions.setValues(
+    referenceRepresentation=OFF)
+session.viewports['Viewport: 1'].enableMultipleColors()
+session.viewports['Viewport: 1'].setColor(initialColor='#BDBDBD')
+cmap=session.viewports['Viewport: 1'].colorMappings['Material']
+session.viewports['Viewport: 1'].setColor(colorMapping=cmap)
+session.viewports['Viewport: 1'].disableMultipleColors()
+mdb.save()
+#: The model database has been saved to "E:\Project\RVE.cae".
